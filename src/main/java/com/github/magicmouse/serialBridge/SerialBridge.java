@@ -12,18 +12,17 @@ public class SerialBridge {
             for(String arg : args ){
 
                 String[] part= arg.split(":");
-                switch(part[0]){
-                    case "-com1":
-                        com1 = part[1];
-                        break;
-                    case "-com2":
-                        com2 = part[1];
-                        break;
-                    case "-baud":
-                        baud = part[1];
-                        break;
-                    default:
-                        throw new Exception("Invalid argument exception: either you added an extra argument or you didnt have what you should.");
+                if (part[0].equals("-com1")) {
+                    com1 = part[1];
+
+                } else if (part[0].equals("-com2")) {
+                    com2 = part[1];
+
+                } else if (part[0].equals("-baud")) {
+                    baud = part[1];
+
+                } else {
+                    throw new Exception("Invalid argument exception: either you added an extra argument or you didnt have what you should.");
                 }
 
             }

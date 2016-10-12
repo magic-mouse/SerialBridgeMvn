@@ -11,7 +11,7 @@ public class RunClassTest {
 
 
     @Test
-    public static void testSerial(){
+    public void testSerial(){
 
     }
 
